@@ -8,16 +8,14 @@ const connect = function () {
     port: "50541"// PORT number here,
   });
 
-  //$(selector).on(event,childSelector,data,function,map)
-// console.log(You're connected"
-//Name: RBS
+
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
   conn.on("connect",function(){
     console.log("You're connected")
     conn.write("Name: RBS")
-    conn.write("Move: up")
+    //.conn.write("Move: up")
 
   })
 
@@ -25,5 +23,5 @@ const connect = function () {
 };
 
 
-module.exports =  connect 
+module.exports =  connect;
 
