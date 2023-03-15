@@ -20,6 +20,14 @@ console.log("key", key)
     
            if (key === 'w') {
             console.log("Move: down")}
+
+            if (key === 'r') {
+              console.log("You won the lottery")}
+
+              if (key === 't') {
+                console.log("Hello World")}
+
+
     
 };
 
