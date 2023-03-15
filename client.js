@@ -1,3 +1,6 @@
+const net = require("net");
+
+
 // establishes a connection with the game server
 const connect = function () {
   const conn = net.createConnection({
@@ -5,13 +8,19 @@ const connect = function () {
     port: "50541"// PORT number here,
   });
 
+  //$(selector).on(event,childSelector,data,function,map)
+// console.log(You're connected"
+//Name: RBS
+
   // interpret incoming data as text
   conn.setEncoding("utf8");
+  conn.on("connect",function(){
+    console.log("You're connected")
+    conn.write("Name: RBS")
+  })
 
   return conn;
 };
-
-const sponngBob = 23
 
 
 module.exports =  connect 
